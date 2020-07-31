@@ -1649,6 +1649,7 @@ Here's a list of currently recognized directives:
     (when (eq type 'command)
       (setq template (yas--read-lisp (concat "(progn" template ")"))))
     (when group
+      (setq name (concat group "/" name))
       (setq group (split-string group "\\.")))
     (list key template name condition group expand-env file binding uuid)))
 
